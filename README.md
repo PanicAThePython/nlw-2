@@ -8,6 +8,7 @@
 
 
   Visualização em mobiles:
+  
   ![mobile](proffy-images/mobileproffy.PNG)
 
 ## Página de Pesquisa de Professores
@@ -16,5 +17,6 @@
   ![index-search](proffy-images/searchproffy.PNG)
 
   Visualização em mobiles:
+  
   ![mobile-search](proffy-images/mobilesearchproffy.PNG)
   ![mobile-search2](proffy-images/mobilesearchproffy2.PNG)
