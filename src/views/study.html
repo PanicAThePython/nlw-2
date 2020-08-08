@@ -54,30 +54,30 @@
        </header>
 
        <main>
-            {%for prof in proffys%}
-                <article class="teacher-item">
-                        <header>
-                            <img 
-                                src="{{prof.avatar}}" 
-                                alt="{{prof.name}}">
-                            <div>
-                                <strong>{{prof.name}}</strong>
-                                <span>{{prof.subject}}</span>
-                            </div>
-                        </header>
-                    
-                        <p>{{prof.bio}}</p>
-                    
-                        <footer>
-                            <p>Preço/hora<strong>R$ {{prof.cost}},00</strong>
-                            </p>
-                            <a href="https://api.whatsapp.com/send?l=pt_BR&phone55{{prof.whatsapp}}&text=Tenho interesse na sua aula de {{prof.subject}} {{prof.name}}"
-                            class="button" target="_blank">
-                                <img src="images/icons/whatsapp.svg" alt="Whatsapp">Entrar em contato
-                            </a>
-                        </footer>
-                </article>
-            {%endfor%}
+            {%if proffys == ""%}
+                <p class="no-results">Nenhum professor encontrado com a sua pesquisa.</p>
+            {%else%}
+                {%for prof in proffys%}
+                    <article class="teacher-item">
+                            <header>
+                                <img src="{{prof.avatar}}" alt="{{prof.nome}}">
+                                <div>
+                                    <strong>{{prof.nome}}</strong>
+                                    <span>{{prof.subject}}</span>
+                                </div>
+                            </header>
+                            <p>{{prof.bio}}</p>
+                            <footer>
+                                <p>Preço/hora<strong>R$ {{prof.cost}},00</strong>
+                                </p>
+                                <a href="https://api.whatsapp.com/send?l=pt_BR&phone55{{prof.whatsapp}}&text=Tenho interesse na sua aula de {{prof.subject}} {{prof.name}}"
+                                class="button" target="_blank">
+                                    <img src="images/icons/whatsapp.svg" alt="Whatsapp">Entrar em contato
+                                </a>
+                            </footer>
+                    </article>
+                {%endfor%}
+            {%endif%}
        </main>
     </div>
 </body>
